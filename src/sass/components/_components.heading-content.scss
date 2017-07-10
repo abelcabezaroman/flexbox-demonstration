@@ -1,0 +1,12 @@
+//******************************************************************************
+//  #HEADING CONTENT COMPONENT
+//******************************************************************************
+
+.c-heading-content {
+    border      : 3px solid;
+    padding     : 10px;
+    font-weight : 400;
+    &--primary {
+        border-left : 25px solid;
+    }
+}

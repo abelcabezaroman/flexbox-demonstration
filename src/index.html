@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>gulp.js + webpack boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- inject:css --><!-- endinject -->
+</head>
+<body>
+<div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    <!-- inject:svg --><!-- endinject -->
+</div>
+<div class="container-fluid">
+    <div class="o-content">
+        <h1>Flexbox Demostration</h1>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content c-heading-content--primary">¿Qué es flexbox?</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box"><span class="c-text">Flexbox</span> es un modelo de cajas flexibles, por lo que
+                las cajas que definamos
+                dentro de nuestro layout tendrán la habilidad de alterar su width/height (y orden) para aprovechar al
+                máximo el espacio disponible.</p>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Además de esto, flexbox nos permite de manera sencilla cambiar la orientación de
+                las cajas, su posición,
+                la de su contenido...</p>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content c-heading-content--primary">Flex Container</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">
+                Para poder empezar a utilizar <span class="c-text">flexbox</span> es imprescindible setearlo en nuestro
+                elemento padre y especificar
+                el comportamiento que tendrá nuestro contenedor una vez lo hagamos flexible.
+            </p>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">display</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Propiedad básica, con <span class="c-text">display: flex</span> convertimos a
+                nuestro elemento como un contenedor flexible.
+            </p>
+        </div>
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">flex-direction</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Algo básico, una vez tenemos nuestro contenedor flexible, es elegir que dirección
+                tendrá. Por defecto, esta dirección es en fila, de izquierda a derecha, pero podemos cambiarla con la
+                propiedad <span class="c-text">flex-direction</span>. </p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-4">
+                    <div class="c-primary-box">
+                        <p>Shrink 4</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-1">
+                    <div class="c-primary-box">
+                        <p>Shrink 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-2">
+                    <div class="c-primary-box">
+                        <p>Shrink 2</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-3">
+                    <div class="c-primary-box">
+                        <p>Shrink 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content c-heading-content--primary">Flex Items</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">
+                Una vez tenemos definido nuestro elemento padre, podemos hacer que nuestros items se comporten de manera
+                diferente según diversas propiedades.
+            </p>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">order</h2>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Con la propiedad <span class="c-text">order</span> de flexbox podemos especificar
+                en que posición
+                queremos colocar nuestros elementos
+                independientemente de la posición que estos tengan en el html.</p>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Es importante que cuando apliquemos la propiedad order, la apliquemos a todos los
+                elementos, o estos
+                serán apilados como en el ejemplo 1.</p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-1 c-primary-box">
+                    <p>1 (order: 1)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 c-primary-box">
+                    <p>2 (order: 1)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--order-2 o-fb-child--grow-1 c-primary-box">
+                    <p>3 (order: 2)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 c-primary-box">
+                    <p>4 (order: 1)</p>
+                </div>
+            </div>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--order-4 o-fb-child--grow-1 c-primary-box">
+                    <p>1 (order: 4)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--order-3 o-fb-child--grow-1 c-primary-box">
+                    <p>2 (order: 3)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--order-2 o-fb-child--grow-1 c-primary-box">
+                    <p>3 (order: 2)</p>
+                </div>
+                <div class="o-fb-child o-fb-child--order-1 o-fb-child--grow-1 c-primary-box">
+                    <p>4 (order: 1)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">flex-grow</h2>
+        </div>
+        <div class="o-content ">
+            <p class="c-secondary-box">Con <span class="c-text">flex-grow</span> definimos el ancho de nuestras cajas en
+                unidades enteras. El ancho
+                que se aplique a cada
+                caja dependerá de la proporción entre el total de unidades de los elementos hermanos y el aplicado a la
+                caja en sí misma.</p>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box"> Si creamos 4 cajas y, a cada una le aplicamos un flex-grow de 1, todas las cajas
+                serán iguales en cuanto
+                a tamaño.</p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-content o-content--large">
+            <p class="c-secondary-box">A continuación jugaremos un poco con las unidades para que algunas de las cajas
+                crezcan más que otras.</p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-2">
+                    <div class="c-primary-box">
+                        <p>Grow 2</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1">
+                    <div class="c-primary-box">
+                        <p>Grow 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-4">
+                    <div class="c-primary-box">
+                        <p>Grow 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-2">
+                    <div class="c-primary-box">
+                        <p>Grow 2</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-4">
+                    <div class="c-primary-box">
+                        <p>Grow 4</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-2">
+                    <div class="c-primary-box">
+                        <p>Grow 2</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-8">
+                    <div class="c-primary-box">
+                        <p>Grow 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-content">
+            <p class="c-secondary-box">Como hemos visto, es lo mismo aplicar un grow de 1 en un total de 8, que un grow
+                de 2 en un total de 16. El ancho se calcula proporcialmente.</p>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">flex-basis</h2>
+        </div>
+        <div class="o-content ">
+            <p class="c-secondary-box">La propiedad <span class="c-text">flex-basis</span> setea el tamaño inicial que
+                deberá de tener nuestra caja.</p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--basis-150">
+                    <div class="c-primary-box">
+                        <p>Basis 150</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--basis-300">
+                    <div class="c-primary-box">
+                        <p>Basis 300</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--basis-250">
+                    <div class="c-primary-box">
+                        <p>Basis 250</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--basis-200">
+                    <div class="c-primary-box">
+                        <p>Basis 200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">flex-shrink</h2>
+        </div>
+        <div class="o-content ">
+            <p class="c-secondary-box">Con <span class="c-text">flex-shrink</span> definimos la habilidad de una caja de
+                reducirse si es necesario. Esto quiere decir que, a mayor sea el valor de la propiedad flex-shrink, más
+                se reducirá en comparación a sus cajas hermanas.</p>
+        </div>
+        <div class="o-content ">
+            <p class="c-secondary-box">En nuestro ejemplo hemos especificado un flex-basis de 200 a todas las cajas y un
+                flex-shrink diferente a cada una. Al reducir la pantalla vemos claramente como cada caja se reduce en un
+                proporcion diferente dependiendo de la propiedad flex-shrink. A mayor es el valor, más se reducirá.</p>
+        </div>
+        <div class="o-content">
+            <div class="o-fb-father">
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-4">
+                    <div class="c-primary-box">
+                        <p>Shrink 4</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-1">
+                    <div class="c-primary-box">
+                        <p>Shrink 1</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-2">
+                    <div class="c-primary-box">
+                        <p>Shrink 2</p>
+                    </div>
+                </div>
+                <div class="o-fb-child o-fb-child--grow-1 o-fb-child--basis-200 o-fb-child--shrink-3">
+                    <div class="c-primary-box">
+                        <p>Shrink 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-content o-content--large">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">flex</h2>
+        </div>
+        <div class="o-content ">
+            <p class="c-secondary-box">Si pensamos que agregar cada una de las propiedades antes descritas puede ser un
+                coñazo, tranquilos hay solución. Basta con agregar con el orden específico la propiedad <span
+                    class="c-text">flex: none || <'flex-grow'> <'flex-shrink'> <'flex-basis'></span>.</p>
+        </div>
+    </div>
+    <div class="o-content">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">Normal Grid</h2>
+        </div>
+        <div class="o-content">
+            <div class="row">
+                <div class="col">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-content">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="o-content">
+        <div class="o-content o-content--large">
+            <h2 class="c-heading-content">justify-content-md-center</h2>
+        </div>
+
+        <div class="o-content">
+            <div class="row justify-content-md-center">
+                <div class="col-10 col-sm-4">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4">
+                    <div class="c-primary-box">
+                        <p>Col</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

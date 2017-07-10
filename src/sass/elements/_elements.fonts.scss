@@ -1,0 +1,36 @@
+/*-------------------------------------------
+	#FONT GENERATOR
+---------------------------------------------*/
+
+///* Example for use @font-face
+//
+//	@include font-face([name-font],
+//		"[path]",
+//		[font-style],
+//		[font-weight],
+//		[type-font(eot | woff | svg | ttf)]
+//	);
+//
+//*/
+
+@include font-face(Raleway,
+	$font-path	+ "raleway/RalewayRegular",
+	normal,
+	normal,
+	woff ttf eot svg
+);
+
+
+//@include font-face(Raleway--black,
+//	$font-path	+ "Raleway/RalewayBlack",
+//	normal,
+//	normal,
+//	woff ttf eot svg
+//);
+
+//@include font-face(Raleway--light,
+//	$font-path	+ "Raleway/RalewayLight",
+//	normal,
+//	normal,
+//	woff ttf eot svg
+//);
