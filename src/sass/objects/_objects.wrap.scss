@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+
+/**
+ * The container object simply containeres off wrap. Extend with cosmetic styles in the
+ * Components layer.
+ *
+ * 1. So we can apply the `.o-wrap` class to naturally-inline elements.
+ */
+
+.o-wrap {
+    @include inuit-clearfix();
+    //display: block;
+    /* [1] */
+    padding-left: 25px;
+    padding-right: 25px;
+    // >:last-child {
+    //	padding-right: 0;
+    //}
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.o-wrap--flush {
+    padding: 0;
+}
+
+.o-wrap--tiny {
+    padding-left: $inuit-global-spacing-unit-tiny;
+    padding-right: $inuit-global-spacing-unit-tiny;
+}
+
+.o-wrap--small {
+    padding-left: $inuit-global-spacing-unit-small;
+    padding-right: $inuit-global-spacing-unit-small;
+}
+
+.o-wrap--large {
+    padding-left: $inuit-global-spacing-unit-large;
+    padding-right: $inuit-global-spacing-unit-large;
+}
+
+.o-wrap--huge {
+    padding-left: $inuit-global-spacing-unit-huge;
+    padding-right: $inuit-global-spacing-unit-huge;
+}
+
+
+/* Container reset
+   ****************************************************************************/
+
+.o-wrap--no-t {
+    padding-left: 0;
+}
+
+.o-wrap--no-b {
+    padding-right: 0;
+}
